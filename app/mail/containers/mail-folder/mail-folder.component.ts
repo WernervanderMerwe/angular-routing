@@ -1,10 +1,8 @@
-import 'rxjs/add/operator/pluck';
-
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Observable } from 'rxjs';
-
 import { Mail } from '../../models/mail.interface';
+import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/operator/pluck';
 
 @Component({
   selector: 'mail-folder',

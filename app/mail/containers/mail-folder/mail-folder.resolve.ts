@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { ActivatedRouteSnapshot, Resolve, RouterStateSnapshot } from '@angular/router';
+import { Resolve, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
 
 import { MailService } from '../../mail.service';
 import { Mail } from '../../models/mail.interface';
@@ -8,6 +8,6 @@ import { Mail } from '../../models/mail.interface';
 export class MailFolderResolve implements Resolve<Mail[]> {
   constructor(private mailService: MailService) {}
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
-    return this.mailService.getFolder(route.params.name)
+    return this.mailService.getFolder(route.params.name);
   }
 }
