@@ -1,0 +1,15 @@
+import 'rxjs/add/observable/of';
+
+import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs/Observable';
+
+@Injectable()
+export class AuthService {
+  user = { isAdmin: true };
+  checkPermissions() {
+    return Observable.of(this.user.isAdmin);
+  }
+  isLoggedIn() {
+    return Observable.of(true);
+  }
+}
